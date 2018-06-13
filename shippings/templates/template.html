@@ -1,0 +1,25 @@
+{% load staticfiles crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+    <body>
+{#    <div>#}
+{#        <img src="{% static 'images/Sword.jpg'  %}">#}
+{#    </div>#}
+    <div>
+        {% if form.non_field_errors %}
+            <p class="messages">There were some errors. Please correct them below.</p>
+            {{ form.non_field_errors }}
+        {% endif %}
+
+         <form method="post">
+              {% csrf_token %}
+                  {{ form }}
+              <button type="submit">Submit</button>
+        </form>
+    </div>
+
+  </body>
+</html>

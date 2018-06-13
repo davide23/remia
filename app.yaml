@@ -1,0 +1,12 @@
+# [START runtime]
+runtime: python
+entrypoint: gunicorn -b :$PORT remia.wsgi
+env: flex
+
+beta_settings:
+# from command >> gcloud sql instances describe DATABASE-NAME <<
+  cloud_sql_instances: 'remia012:europe-west4:remia-db'
+
+runtime_config:
+  python_version: 3
+# [END runtime]
