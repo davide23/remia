@@ -91,8 +91,8 @@ DATABASES = {
         # If you are using Cloud SQL for MySQL rather than PostgreSQL, set
         # 'ENGINE': 'django.db.backends.mysql' instead of the following.
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'remia_clients',
-        'USER': 'dav',
+        'NAME': 'remiaclients',
+        'USER': 'postgres',
         'PASSWORD': 'free_to_enter',
         # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
         # SQL Proxy instances running locally must also be set to tcp:3306.
