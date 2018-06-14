@@ -4,22 +4,43 @@
 <html>
   <head>
   </head>
-    <body>
-{#    <div>#}
-{#        <img src="{% static 'images/Sword.jpg'  %}">#}
-{#    </div>#}
-    <div>
-        {% if form.non_field_errors %}
-            <p class="messages">There were some errors. Please correct them below.</p>
-            {{ form.non_field_errors }}
-        {% endif %}
+<body>
+    <div class="align-right">
+        <img src="https://static.fanpage.it/wp-content/uploads/sites/17/2015/09/Sword.jpg" style="
+    width: 30%;
+    float: right;
+    position: relative;
+">
+    </div>
+    <div style="width: 34%; margin-right: 0px; border: 1%;">
+         <form method="post">{% csrf_token %}
+              <input type="hidden" name="csrfmiddlewaretoken" value="D8p5dSYzskuRJbrq4E5V17mzsnJxHgCjZTP32ovNb7YoDjK02j4UxVV6ifqbbpZO">
 
-         <form method="post">
-              {% csrf_token %}
-                  {{ form }}
-              <button type="submit">Submit</button>
+                    <label for="id_full_name">Volledige naam:</label>
+                        <input type="text" name="full_name" maxlength="50" required="" id="id_full_name"><br>
+                            <span class="helptext">
+                                Volledige naam
+                            </span>
+                    <label for="id_street_and_number">Straat + Huisnummer:</label>
+                        <input type="text" name="street_and_number" maxlength="300" required="" id="id_street_and_number"><br>
+                            <span class="helptext">
+                                Straat + Huisnummer
+                            </span>
+                    <label for="id_postcode">Postcode:</label>
+                    <input type="text" name="postcode" maxlength="20" required="" id="id_postcode"><br>
+                            <span class="helptext">
+                                Postcode
+                            </span>
+                    <label for="id_city">Plaats:</label>
+                        <input type="text" name="city" maxlength="200" required="" id="id_city"><br>
+                            <span class="helptext">
+                                Plaats
+                            </span>
+
+                    <button type="submit">Submit</button>
         </form>
     </div>
 
-  </body>
-</html>
+
+
+</body></html>

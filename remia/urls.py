@@ -4,5 +4,5 @@ from shippings.views import get_name
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^pages/', get_name),
+    url(r'', get_name),
 ]
