@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "remia012",
+  "private_key_id": "73c203f28714e4b239c271b062b661b94a05ffea",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCUo+2Z3R7lssjM\nSLqjMqkR3TK5r7kVJu8Eh36XdB5qLduZjcQohXIZZ1rF2GaPGcz6DT+nHHgnVilq\npXWjzRzsyjdIemfmVYHxgT42z5qWctCFWU643EQc3q939bm5z8EYsFre9ULNhPpD\nrSHtGB4CrU+h6Me30ThrlkULujwOf/dJqvMEVDE0tyGiN8qu9aFRa2NK5bMOomyk\nOsH01nkP3ub2MVe+Ax0tOgpKO0VT8Y9yMEur5fiT8SUpGqGMm6peEXBYe8lrTW1/\ndlwF//WKOB5+yzr0tXnUSa+5ARwuXp3oDgMuTPAZ97EvzhaNPXa47lsIfgg0P30F\n9lN/DyQxAgMBAAECggEAAmVG988ex5xzTImSin1PSMSsI95/aOYc/ZFyep3qPJNb\nIfUtN2r5LQwjpCMp+f30NgZ/I2Ib1KR4m+mpRPfSEsXqkK46XPW9V6dZ2ZfMecbF\nchS/pk6UgXOcV95bvTEqP0veVxAUYMwXHX6dmJzmJOxmp2khSObkFiXQnJEGlUQ3\n7hZ8gQBfUD6R6qgwyzctNL86LGhEk9czebNVZz/OO7B1prOHeSlTVMm6QU7oRXZz\nAIhN6+jS1z5+MG0b9vJE6UM6kEbdqPiTvawP+tb/6+/t0AIQzKnc0OKJPMM8lboT\niU/SMSvG0fwMqCr7UZR2MhbmCJ45vox+Puk9zLzUXQKBgQDEj29QP4UmBt/Ev6RW\nWuOaMTS9bmVD2SiFCH1sXOHCoiBTaHTalYtqkUf0FXlX9df8Slj+xqtP9LlYUGVy\npBCdGsQUMzn/H2XJWE/0t5SyPlL4JlaNWv1TNroZ8W3tp0nEiZtvrhnBtjy8Z1t2\nDbcrZsTpIe9TY6kgXnfu1Y39LQKBgQDBls6b7MTJtjNsV25x3ex63+GYrinKvJa6\n+eKDMvWgMVkvPEHempxL//fkoiWU0GINEhMtF/IR2nTVC8ZbbgfYPMjy1fWkSNFa\nSrRVRg/yyQ2gB2ng/L9dwSoA9FvG/DoMmJbuJd2Bs1GdDdoucxiOcbUUOMc2DQ+Y\nXD3u4H2NlQKBgQCwBYb4hTm2mRdQuRHw50nFbmU9cpwqy1CW+chf/zmJM+jg6L0k\ndiE4mMun0Icu9xCpdOcHmWAWpSBJ7w06QaRDHJIVSN6aEkLzsStBChmWGWvxn1uJ\nEL+lAnBcBTGdTl8oKtbQh0e3inwPeDuWl6e9rTWPVP1eXvQ48YBTmFikLQKBgASE\nOTPIFVtDZfW8IHaFn/PJ72B5h74UIkwgcllvQe3H2PXSKRNBdi4LvcPWyJutNOxr\nJIljyqECAMHLsYgGjCZOXL3VohKAJGo/3e8zYEHg0PGP2reGDgzo6cr16II+9je/\nA55wwbc58MiCPzngM413N6tOG8+2BEwgss007Zj1AoGAZevLLwWTW3meb+fn38bx\ngdmyjO3UkZXJFicqglkUQrL0ke3MdhAxNEBFhM/1QRv1wN4dz3WUk3NartjZtUMQ\nzU5yUTJsi4MqAKh7+0t9jO+WQp5f1SEeXezqWlKRQqDdW2Jdwhv1sSc8TYwFMHXS\nNXD+SwR8s0HOw+evoZoe0A4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "remiaclients@remia012.iam.gserviceaccount.com",
+  "client_id": "115117367496623139081",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/remiaclients%40remia012.iam.gserviceaccount.com"
+}

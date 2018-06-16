@@ -58,7 +58,6 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -103,11 +102,45 @@ DATABASES = {
 # In the flexible environment, you connect to CloudSQL using a unix socket.
 # Locally, you can use the CloudSQL proxy to proxy a localhost connection
 # to the instance
-DATABASES['default']['HOST'] = '/cloudsql/remia012:europe-west4:remia-db'
-if os.getenv('GAE_INSTANCE'):
-    pass
+# DATABASES['default']['HOST'] = '/cloudsql/remia012:europe-west4:remiaclients'
+# if os.getenv('GAE_INSTANCE'):
+#     pass
+# else:
+#     DATABASES['default']['HOST'] = '127.0.0.1'
+
+if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+    # Running on production App Engine, so use a Google Cloud SQL database.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
+            'NAME': 'remiaclients',
+            'USER': 'postgres',
+            'PASSWORD': 'free_to_enter',
+            'PORT': '5432',
+        }
+    }
+elif os.getenv('SETTINGS_MODE') == 'prod':
+    # Running in development, but want to access the Google Cloud SQL instance in production.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'INSTANCE': '104.155.109.98',
+            'NAME': 'remiaclients',
+            'USER': 'postgres',
+            'PASSWORD': 'free_to_enter',
+        }
+    }
 else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
+    # Running in development, so use a local MySQL database.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'remiaclients',
+            'USER': 'postgres',
+            'PASSWORD': 'free_to_enter',
+        }
+    }
 # [END dbconfig]
 
 LANGUAGE_CODE = 'en-us'
@@ -141,8 +174,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Fill in your cloud bucket and switch which one of the following 2 lines
 # is commented to serve static content from GCS
 # STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
-# STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
-STATIC_URL = '/static/'
+STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
+# STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
-
-GOOGLE_APPLICATION_CREDENTIALS='/Users/davide/work/remia/remia/remia-5fff409d4b24.json'
