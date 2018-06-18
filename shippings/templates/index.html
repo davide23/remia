@@ -1,0 +1,84 @@
+{% load staticfiles crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remia</title>
+  <link rel="stylesheet" href="../../app.bundle.css">
+</head>
+<body>
+
+  <article class="content">
+    <div class="content__container">
+      <header class="content__header">
+        <h1>#LegendaryMayo</h1>
+      </header>
+      <div class="row">
+        <h1 class="copy__headline">Vraag hier je legendary sample aan</h1>
+        <div class="copy__body">
+          <p>De nieuwe legendary mayonaises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise samples nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
+          <ul class="copy__list">
+            <li class="copy__list-item copy__list-item--secondary">Garlic-Sriracha</li>
+            <li class="copy__list-item copy__list-item--tertiary">Rosemary-Seasalt</li>
+            <li class="copy__list-item copy__list-item--quaternary">Black Truffle</li>
+          </ul>
+          <p>Vergeet niet jouw legendary ervaring te delen op Instagram! Tag <a class="copy__link" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong>#Legendarymayo</strong>.</p>
+        </div>
+        <div class="carousel" data-carousel="instagram">
+          <div class="carousel__button carousel__button--prev" role="button" data-carousel-button="prev">
+            <img src="/static/svg/arrow.svg" alt="Next">
+          </div>
+          <div class="carousel__container" data-carousel-content>
+            <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <img src="/static/img/sample-1.jpg" alt="Remia sample 1">
+            </a>
+            <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <img src="/static/img/sample-2.jpg" alt="Remia sample 3">
+            </a>
+            <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <img src="/static/img/sample-3.jpg" alt="Remia sample 3">
+            </a>
+          </div>
+          <div class="carousel__button carousel__button--next" role="button" data-carousel-button="next">
+            <img src="/static/svg/arrow.svg" alt="Next">
+          </div>
+        </div>
+        <form class="form" method="post">
+          <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
+          <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
+          <input class="form__field" type="text" name="postal-code" placeholder="Postcode" required>
+          <input class="form__field" type="text" name="city" placeholder="Plaats" required>
+          <a class="form__link" href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+          <input class="form__submit" type="submit" value="Versturen">
+        </form>
+      </div>
+      <footer class="footer">
+        <a class="footer__logo" href="/" target="_blank">
+          <img src="/static/svg/remia.svg" alt="Remia">
+        </a>
+        <ul class="footer__links">
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img src="/static/svg/website.svg" alt="Website Remia">
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img src="/static/svg/instagram.svg" alt="Instagram Remia">
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img src="/static/svg/facebook.svg" alt="Facebook Remia">
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </article>
+
+  <script src="../../app.bundle.js"></script>
+</body>
+</html>
