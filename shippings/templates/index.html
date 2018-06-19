@@ -1,4 +1,4 @@
-{% load staticfiles crispy_forms_tags %}
+{%load staticfiles%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remia</title>
-  <link rel="stylesheet" href="../../app.bundle.css">
+  <link rel="stylesheet" href="/app.bundle.css">
 </head>
 <body>
-
   <article class="content">
     <div class="content__container">
       <header class="content__header">
@@ -45,7 +44,7 @@
             <img src="/static/svg/arrow.svg" alt="Next">
           </div>
         </div>
-        <form class="form" method="post">
+        <form class="form">
           <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
           <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
           <input class="form__field" type="text" name="postal-code" placeholder="Postcode" required>
@@ -79,6 +78,6 @@
     </div>
   </article>
 
-  <script src="../../app.bundle.js"></script>
+  <script src="/app.bundle.js"></script>
 </body>
 </html>

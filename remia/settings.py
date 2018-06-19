@@ -38,9 +38,12 @@ SECRET_KEY = '+=or+6vx58zpp)#4b(8=w1t1arq=x)dd@09n5!l_ar4v+-+@!y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
-
+# ALLOWED_HOSTS = ['*']
+#
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "shippings/static"),
+#     '/var/www/static/',
+# )
 # Application definition
 INSTALLED_APPS = [
     'shippings',
@@ -93,6 +96,7 @@ DATABASES = {
         'NAME': 'remiaclients',
         'USER': 'postgres',
         'PASSWORD': 'free_to_enter',
+        # 'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
         # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
         # SQL Proxy instances running locally must also be set to tcp:3306.
         'PORT': '5432',
@@ -107,41 +111,41 @@ DATABASES = {
 #     pass
 # else:
 #     DATABASES['default']['HOST'] = '127.0.0.1'
-
-if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
-    # Running on production App Engine, so use a Google Cloud SQL database.
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
-            'NAME': 'remiaclients',
-            'USER': 'postgres',
-            'PASSWORD': 'free_to_enter',
-            'PORT': '5432',
-        }
-    }
-elif os.getenv('SETTINGS_MODE') == 'prod':
-    # Running in development, but want to access the Google Cloud SQL instance in production.
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'INSTANCE': '104.155.109.98',
-            'NAME': 'remiaclients',
-            'USER': 'postgres',
-            'PASSWORD': 'free_to_enter',
-        }
-    }
-else:
-    # Running in development, so use a local MySQL database.
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'remiaclients',
-            'USER': 'postgres',
-            'PASSWORD': 'free_to_enter',
-        }
-    }
-# [END dbconfig]
+#
+# if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+#     # Running on production App Engine, so use a Google Cloud SQL database.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
+#             'NAME': 'remiaclients',
+#             'USER': 'postgres',
+#             'PASSWORD': 'free_to_enter',
+#             'PORT': '5432',
+#         }
+#     }
+# elif os.getenv('SETTINGS_MODE') == 'prod':
+#     # Running in development, but want to access the Google Cloud SQL instance in production.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'INSTANCE': '104.155.109.98',
+#             'NAME': 'remiaclients',
+#             'USER': 'postgres',
+#             'PASSWORD': 'free_to_enter',
+#         }
+#     }
+# else:
+#     # Running in development, so use a local MySQL database.
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'remiaclients',
+#             'USER': 'postgres',
+#             'PASSWORD': 'free_to_enter',
+#         }
+#     }
+# # [END dbconfig]
 
 LANGUAGE_CODE = 'en-us'
 
@@ -176,4 +180,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
 # STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+STATIC_ROOT = 'shippings/../static/'
+# import ipdb
+# ipdb.set_trace()
