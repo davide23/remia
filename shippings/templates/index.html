@@ -7,57 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remia</title>
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
-<style type="text/css">
-    @font-face {
-      font-family:"Barlow Medium";
-      src: url("/static/fonts/barlow-medium-webfont.woff2") format("woff2"),
-           url("/static/fonts/barlow-medium-webfont.woff") format("woff");
-    }
+    <style>
+        @font-face {
+  font-family:"Barlow Medium";
+  src: url("/static/fonts/barlow-medium-webfont.woff2") format("woff2"),
+       url("/static/fonts/barlow-medium-webfont.woff") format("woff");
+}
 
-    @font-face {
-      font-family:"Barlow Bold";
+@font-face {
+  font-family:"Barlow Bold";
       src: url("/static/fonts/barlow-bold-webfont.woff2") format("woff2"),
            url("/static/fonts/barlow-bold-webfont.woff") format("woff");
-    }
-
-    :root {
-      --primary-font: 'Barlow Medium', Helvetica, sans-serif;
-      --secondary-font: 'Barlow Bold', Helvetica, sans-serif;
-
-      --primary-color: #DB0010;
-      --secondary-color: #EDA104;
-      --tertiary-color: #008A6B;
-      --quaternary-color: #562059;
-
-      --dark-color: #000000;
-      --grey-color: #9B9B9B;
-      --light-color: #FFFFFF;
-
-      /* Baseline size */
-      --bsl: 1.5rem;
-    }
-</style>
+}
+    </style>
 </head>
-<body style="background-image: Url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');">
+<body style="background-image: Url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');font-family: Barlow Medium, Helvetica, sans-serif">
 
   <article class="container">
     <div class="container__block">
       <header class="container__header">
-        <h1>#LegendaryMayo</h1>
+        <h1 style="font-family: Barlow Bold, Helvetica, sans-serif">#LegendaryMayo</h1>
       </header>
       <div class="content">
         <h2 class="content__headline">Vraag hier je legendary sample aan</h2>
         <div class="content__copy" data-copy>
           <p>De nieuwe legendary mayonaises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise samples nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
           <ul class="content__list">
-            <li class="content__list-item content__list-item--secondary">Garlic-Sriracha</li>
-            <li class="content__list-item content__list-item--tertiary">Rosemary-Seasalt</li>
-            <li class="content__list-item content__list-item--quaternary">Black Truffle</li>
+            <li class="content__list-item content__list-item--secondary" style="font-family: Barlow Bold, Helvetica, sans-serif">Garlic-Sriracha</li>
+            <li class="content__list-item content__list-item--tertiary" style="font-family: Barlow Bold, Helvetica, sans-serif">Rosemary-Seasalt</li>
+            <li class="content__list-item content__list-item--quaternary" style="font-family: Barlow Bold, Helvetica, sans-serif">Black Truffle</li>
           </ul>
-          <p>Vergeet niet jouw legendary ervaring te delen op Instagram! Tag <a class="copy__link" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong>#Legendarymayo</strong>.</p>
+          <p>Vergeet niet jouw legendary ervaring te delen op Instagram! Tag <a class="copy__link" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong style="font-family: Barlow Bold, Helvetica, sans-serif">#Legendarymayo</strong>.</p>
         </div>
 
-        <button class="content__toggle" data-toggle-copy>Lees meer</button>
+        <button class="content__toggle" data-toggle-copy style="font-family: Barlow Bold, Helvetica, sans-serif">Lees meer</button>
 
         <div class="carousel" data-carousel="instagram">
           <div class="carousel__button carousel__button--prev" role="button" data-carousel-button="prev">
@@ -65,22 +48,22 @@
           </div>
           <div class="carousel__container" data-carousel-container>
             <div class="carousel__content" data-carousel-content>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-1.jpg' %}" alt="Remia sample 1">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-2.jpg' %}" alt="Remia sample 2">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-3.jpg' %}" alt="Remia sample 3">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-4.jpg' %}" alt="Remia sample 4">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-5.jpg' %}" alt="Remia sample 5">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-6.jpg' %}" alt="Remia sample 6">
               </a>
             </div>
@@ -96,10 +79,10 @@
           <input class="form__field" type="text" name="postal-code" placeholder="Postcode" required>
           <input class="form__field" type="text" name="city" placeholder="Plaats" required>
           <div class="tooltip">
-            <span class="tooltip__trigger">Algemene Voorwaarden</span>
+            <span class="tooltip__trigger" style="font-family: Barlow Medium, Helvetica, sans-serif">Algemene Voorwaarden</span>
             <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming.</p>
           </div>
-          <input class="form__submit" type="submit" value="Versturen">
+          <input class="form__submit" style="font-family: Barlow Bold, Helvetica, sans-serif" type="submit" value="Versturen">
         </form>
       </div>
       <footer class="footer">
