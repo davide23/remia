@@ -7,38 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remia</title>
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
-<style type="text/css">
-    @font-face {
-      font-family:"Barlow Medium";
-      src: url("/static/fonts/barlow-medium-webfont.woff2") format("woff2"),
-           url("/static/fonts/barlow-medium-webfont.woff") format("woff");
-    }
-
-    @font-face {
-      font-family:"Barlow Bold";
-      src: url("/static/fonts/barlow-bold-webfont.woff2") format("woff2"),
-           url("/static/fonts/barlow-bold-webfont.woff") format("woff");
-    }
-
-    :root {
-      --primary-font: 'Barlow Medium', Helvetica, sans-serif;
-      --secondary-font: 'Barlow Bold', Helvetica, sans-serif;
-
-      --primary-color: #DB0010;
-      --secondary-color: #EDA104;
-      --tertiary-color: #008A6B;
-      --quaternary-color: #562059;
-
-      --dark-color: #000000;
-      --grey-color: #9B9B9B;
-      --light-color: #FFFFFF;
-
-      /* Baseline size */
-      --bsl: 1.5rem;
-    }
-</style>
 </head>
-<body style="background-image: Url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');">
+<body>
 
   <article class="container">
     <div class="container__block">
@@ -66,22 +36,22 @@
           <div class="carousel__container" data-carousel-container>
             <div class="carousel__content" data-carousel-content>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-1.jpg' %}" alt="Remia sample 1">
+                  <img src="{% static 'img/sample-1.jpg' %}" alt="Remia sample 1">
               </a>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-2.jpg' %}" alt="Remia sample 2">
+                  <img src="{% static 'img/sample-2.jpg' %}" alt="Remia sample 2">
               </a>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-3.jpg' %}" alt="Remia sample 3">
+                  <img src="{% static 'img/sample-3.jpg' %}" alt="Remia sample 3">
               </a>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-4.jpg' %}" alt="Remia sample 4">
+                  <img src="{% static 'img/sample-4.jpg' %}" alt="Remia sample 4">
               </a>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-5.jpg' %}" alt="Remia sample 5">
+                  <img src="{% static 'img/sample-5.jpg' %}" alt="Remia sample 5">
               </a>
               <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-6.jpg' %}" alt="Remia sample 6">
+                  <img src="{% static 'img/sample-6.jpg' %}" alt="Remia sample 6">
               </a>
             </div>
           </div>
@@ -90,7 +60,7 @@
           </div>
         </div>
 
-        <form class="form" method="post" content="t">
+        <form class="form" method="post">
           <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
           <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
           <input class="form__field" type="text" name="postal-code" placeholder="Postcode" required>
@@ -104,7 +74,7 @@
       </div>
       <footer class="footer">
         <a class="footer__logo" href="/" target="_blank">
-          <img src="{% static 'svg/remia.svg' %}" alt="Remia">
+            <img src="{% static 'svg/remia.svg' %}" alt="Remia">
         </a>
         <ul class="footer__links">
           <li>

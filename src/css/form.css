@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 900px) {
+    padding-right: calc(var(--bsl) * 1.25);
+    padding-left: calc(var(--bsl) * 1.25);
+  }
+
+  &__field {
+    margin-top: var(--bsl);
+    padding-top: calc(var(--bsl) / 3);
+    padding-left: var(--bsl);
+    border: 1px solid var(--primary-color);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: calc(var(--bsl) * 1.5);
+  }
+
+  &__submit {
+    align-self: flex-end;
+    min-width: 50%;
+    margin-top: calc(var(--bsl) / 2);
+    margin-bottom: var(--bsl);
+    padding-top: calc(var(--bsl) / 2);
+    border: none;
+    font-family: var(--secondary-font);
+    font-size: inherit;
+    line-height: calc(var(--bsl) * 1.25);
+    color: var(--light-color);
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+    @media screen and (min-width: 900px) {
+      margin-bottom: calc(var(--bsl) / 2);
+    }
+  }
+}

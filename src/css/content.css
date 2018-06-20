@@ -1,0 +1,124 @@
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--bsl) * 1);
+
+  & > * {
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 5;
+    }
+
+    &:nth-child(5) {
+      order: 2;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: block;
+    column-count: 2;
+    padding: calc(var(--bsl) * 2) calc(var(--bsl) * 1);
+
+    & > * {
+      break-inside: avoid;
+    }
+  }
+
+  &__copy {
+    position: relative;
+    height: calc(var(--bsl) * 3.5);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    &--open {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    @media screen and (min-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin-bottom: var(--bsl);
+      padding-right: calc(var(--bsl) * 1);
+      padding-left: calc(var(--bsl) * 1);
+    }
+  }
+
+  &__headline {
+    font-size: 1.618rem;
+    line-height: calc(var(--bsl) * 1.5);
+    color: var(--primary-color);
+    text-transform: uppercase;
+
+    @media screen and (min-width: 900px) {
+      padding-right: calc(var(--bsl) * 1);
+      padding-left: calc(var(--bsl) * 1);
+      font-size: 2.618rem;
+      line-height: calc(var(--bsl) * 2);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__list-item {
+    font-family: var(--secondary-font);
+
+    &--secondary {
+      color: var(--secondary-color);
+    }
+
+    &--tertiary {
+      color: var(--tertiary-color);
+    }
+
+    &--quaternary {
+      color: var(--quaternary-color);
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    padding: var(--bsl);
+    border: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: transparent;
+    outline: 0;
+
+    &::after {
+      content: url(/static/svg/arrow.svg);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(-90deg) scale(0.75);
+    }
+
+    &--open {
+      &::after {
+        transform: translateX(-50%) rotate(90deg) scale(0.75);
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+}

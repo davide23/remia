@@ -1,0 +1,103 @@
+.carousel {
+  position: relative;
+  margin-bottom: calc(var(--bsl) / 2);
+
+  @media screen and (max-width: 899px) {
+    display: none;
+
+    &--visible {
+      display: block;
+      margin-right: calc(var(--bsl) * -1);
+      margin-left: calc(var(--bsl) * -1);
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: 900px) {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+      width: calc(var(--bsl) * 1.25);
+      cursor: pointer;
+    }
+
+    &--prev {
+      left: 0;
+
+      & img {
+        transform: scale(.75);
+        margin-right: calc(var(--bsl) * 0.5); 
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      & img {
+        transform: scale(-.75);
+        margin-left: calc(var(--bsl) * 0.5); 
+      }
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+
+    @media screen and (min-width: 900px) {
+      margin-right: calc(var(--bsl) * 1.25);
+      margin-left: calc(var(--bsl) * 1.25);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    transform: translate3d(-100%, 0, 0);
+
+    &--is-transitioning {
+      transition: transform .5s cubic-bezier(.5, 0, .25, 1);
+    }
+  }
+
+  &__indicator {
+    height: calc(var(--bsl) / 3);
+    width: calc(var(--bsl) / 3);
+    margin-right: calc(var(--bsl) / 8);
+    margin-left: calc(var(--bsl) / 8);
+    border-radius: 50%;
+    background-color: var(--grey-color);
+    transform-origin: center;
+    transform: scale(.75);
+    opacity: .75;
+    transition: transform .25s cubic-bezier(.5, 0, .25, 1), opacity .25s linear, background-color .25s linear;
+
+    &--is-active {
+      opacity: 1;
+      transform: scale(1);
+      background-color: var(--primary-color);
+    }
+  }
+
+  &__indicators {
+    display: none;
+
+    @media (pointer: coarse) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--bsl);
+      width: 100%;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: calc(100% / 3);
+    line-height: 0;
+  }
+}

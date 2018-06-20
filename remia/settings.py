@@ -17,17 +17,8 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'remia.settings'
 
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
 
-# Build paths inside t
-# he project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'remia/shippings/templates')
-
-# TEMPLATES[0]['OPTIONS']['loaders'] = [
-#     ('django.template.loaders.cached.Loader', [
-#         'django.template.loaders.filesystem.Loader',
-#         'django.template.loaders.app_directories.Loader',
-#     ]),
-# ]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -36,9 +27,9 @@ TEMPLATE_PATH = os.path.join(BASE_DIR, 'remia/shippings/templates')
 SECRET_KEY = '+=or+6vx58zpp)#4b(8=w1t1arq=x)dd@09n5!l_ar4v+-+@!y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*']
 #
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, "shippings/static"),
@@ -86,35 +77,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'remia.wsgi.application'
 
+# CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
 
-# [START dbconfig]
+# Deploying DB
 DATABASES = {
     'default': {
-        # If you are using Cloud SQL for MySQL rather than PostgreSQL, set
-        # 'ENGINE': 'django.db.backends.mysql' instead of the following.
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'remiaclients',
         'USER': 'postgres',
         'PASSWORD': 'free_to_enter',
-        # 'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
-        # For MySQL, set 'PORT': '3306' instead of the following. Any Cloud
-        # SQL Proxy instances running locally must also be set to tcp:3306.
+        'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
         'PORT': '5432',
     }
 }
 
-# In the flexible environment, you connect to CloudSQL using a unix socket.
-# Locally, you can use the CloudSQL proxy to proxy a localhost connection
-# to the instance
-# DATABASES['default']['HOST'] = '/cloudsql/remia012:europe-west4:remiaclients'
-# if os.getenv('GAE_INSTANCE'):
-#     pass
-# else:
-#     DATABASES['default']['HOST'] = '127.0.0.1'
-#
-# if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
-#     # Running on production App Engine, so use a Google Cloud SQL database.
-#     DATABASES = {
+# Running on production App Engine, so use a Google Cloud SQL database.
+# DATABASES = {
 #         'default': {
 #             'ENGINE': 'django.db.backends.postgresql',
 #             'HOST': '/cloudsql/remia012:europe-west4:remiaclients',
@@ -124,27 +102,15 @@ DATABASES = {
 #             'PORT': '5432',
 #         }
 #     }
-# elif os.getenv('SETTINGS_MODE') == 'prod':
-#     # Running in development, but want to access the Google Cloud SQL instance in production.
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'INSTANCE': '104.155.109.98',
-#             'NAME': 'remiaclients',
-#             'USER': 'postgres',
-#             'PASSWORD': 'free_to_enter',
-#         }
-#     }
-# else:
-#     # Running in development, so use a local MySQL database.
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'NAME': 'remiaclients',
-#             'USER': 'postgres',
-#             'PASSWORD': 'free_to_enter',
-#         }
-#     }
+# Local
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'remiaclients',
+        'USER': 'postgres',
+        'PASSWORD': 'free_to_enter',
+    }
+}
 # # [END dbconfig]
 
 LANGUAGE_CODE = 'en-us'
@@ -177,9 +143,31 @@ AUTH_PASSWORD_VALIDATORS = [
 # [START staticurl]
 # Fill in your cloud bucket and switch which one of the following 2 lines
 # is commented to serve static content from GCS
-# STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
-# STATIC_URL = 'https://storage.googleapis.com/remia-static/static/'
-STATIC_URL = '/static/'
-STATIC_ROOT = 'shippings/../static/'
+# STATIC_URL = 'https://storage.googleapis.com/remia-static/staticfiles/'
+STATIC_URL = 'https://storage.googleapis.com/remia/static/'
+# STATIC_URL = '/static/'
+# STATIC_ROOT = 'static/'
 # import ipdb
-# ipdb.set_trace()
+# ipdb.set_trace(){%
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     '/static/',
+# ]
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
+STATIC_ROOT = str(ROOT_DIR + 'remia/staticfiles')
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
+# STATIC_URL = '/static/'
+
+# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
+STATICFILES_DIRS = (
+    str(BASE_DIR + '/static'),
+)
+
+# See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+

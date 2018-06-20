@@ -1,0 +1,16 @@
+:root {
+  --primary-font: 'Barlow Medium', Helvetica, sans-serif;
+  --secondary-font: 'Barlow Bold', Helvetica, sans-serif;
+
+  --primary-color: #DB0010;
+  --secondary-color: #EDA104;
+  --tertiary-color: #008A6B;
+  --quaternary-color: #562059;
+
+  --dark-color: #000000;
+  --grey-color: #9B9B9B;
+  --light-color: #FFFFFF;
+
+  /* Baseline size */
+  --bsl: 1.5rem;
+}
