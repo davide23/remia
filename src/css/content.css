@@ -104,7 +104,7 @@
     outline: 0;
 
     &::after {
-      content: url(/static/svg/arrow.svg);
+      content: url('https://storage.googleapis.com/remia/static/svg/arrow.svg');
       position: absolute;
       bottom: 0;
       left: 50%;

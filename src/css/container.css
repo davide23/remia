@@ -18,7 +18,7 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/static/img/remia_background.jpg');
+    background-image: url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

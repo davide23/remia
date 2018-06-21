@@ -12,7 +12,7 @@ body {
   padding-bottom: calc(var(--bsl) * 1);
   font-family: var(--primary-font);
   line-height: var(--bsl);
-  background-image: url('https://storage.googleapis.com/remia-static/static/img/remia_background.jpg');
+  background-image: url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

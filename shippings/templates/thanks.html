@@ -1,12 +1,61 @@
-{% load staticfiles %}
-
+{% load static %}
 <!DOCTYPE html>
-<html>
-  <head>
-  </head>
-    <body>
-<div>
-    ahshdhashdahsdhTHANKS
-</div>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remia</title>
+  <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
+    <style>
+        @font-face {
+          font-family:"Barlow Medium";
+          src: url({% static 'fonts/barlow-medium-webfont.woff2' %}) format("woff2"),
+               url({% static 'fonts/barlow-medium-webfont.woff' %}) format("woff2"),
+        }
+
+        @font-face {
+          font-family:"Barlow Bold";
+          src: url({% static 'fonts/barlow-bold-webfont.woff2' %}) format("woff2"),
+               url({% static 'fonts/barlow-bold-webfont.woff' %}) format("woff2"),
+        }
+    </style>
+</head>
+<body style="background-image: Url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');font-family: Barlow Medium, Helvetica, sans-serif">
+
+  <article class="container">
+    <div class="container__block">
+      <header class="container__header">
+        <h1 style="font-family: Barlow Bold, Helvetica, sans-serif">#LegendaryMayo</h1>
+      </header>
+      <div class="content" style="width: 190%;text-align: center;">
+        <h2 class="content__headline">Bedankt voor het aanvragen van onze 'Legendary Mayonaises' sample, hij komt zo spoedig mogelijk jouw kant op!</h2>
+      </div>
+      <footer class="footer">
+        <a class="footer__logo" href="/" target="_blank">
+          <img src="{% static 'svg/remia.svg' %}" alt="Remia">
+        </a>
+        <ul class="footer__links">
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="/" target="_blank">
+              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </article>
+
+  <script src="{% static 'app.bundle.js' %}"></script>
+</body>
 </html>
