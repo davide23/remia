@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from .forms import ClientForm
 
@@ -20,7 +20,7 @@ def get_name(request):
 
         if form.is_valid():
             form.save()
-            return render(request, template_name='thanks.html')
+            return redirect('https://www.remia.nl/')
 
     else:
         form = ClientForm()
