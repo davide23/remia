@@ -7,40 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Remia</title>
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
-    <style>
-        @font-face {
-          font-family:"Barlow Medium";
-          src: url('https://storage.googleapis.com/remia/static/fonts/barlow-medium-webfont.woff2') format("woff2"),
-               url('https://storage.googleapis.com/remia/static/fonts/barlow-medium-webfont.woff') format("woff2");
-        }
-
-        @font-face {
-          font-family:"Barlow Bold";
-          src: url('https://storage.googleapis.com/remia/static/fonts/barlow-bold-webfont.woff2') format("woff2"),
-               url('https://storage.googleapis.com/remia/static/fonts/barlow-bold-webfont.woff') format("woff2");
-        }
-    </style>
 </head>
-<body style="background-image: Url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');font-family: Barlow Medium, Helvetica, sans-serif">
+<body>
 
-  <article class="container" style="background-image: url('https://storage.googleapis.com/remia/static/img/remia_background.jpg');">
+  <article class="container">
     <div class="container__block">
       <header class="container__header">
-        <h1 style="font-family: Barlow Bold, Helvetica, sans-serif">#LegendaryMayo</h1>
+        <h1>#LegendaryMayo</h1>
       </header>
       <div class="content">
         <h2 class="content__headline">Vraag hier je Legendary sample aan</h2>
         <div class="content__copy" data-copy>
-          <p>De nieuwe Legendary <Mayona></Mayona>ises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise sample nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
+          <p>De nieuwe Legendary Mayonaises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise sample nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
           <ul class="content__list">
-            <li class="content__list-item content__list-item--secondary" style="font-family: Barlow Bold, Helvetica, sans-serif">Garlic-Sriracha</li>
-            <li class="content__list-item content__list-item--tertiary" style="font-family: Barlow Bold, Helvetica, sans-serif">Rosemary-Seasalt</li>
-            <li class="content__list-item content__list-item--quaternary" style="font-family: Barlow Bold, Helvetica, sans-serif">Black Truffle</li>
+            <li class="content__list-item content__list-item--secondary">Garlic-Sriracha</li>
+            <li class="content__list-item content__list-item--tertiary">Rosemary-Seasalt</li>
+            <li class="content__list-item content__list-item--quaternary">Black Truffle</li>
           </ul>
-          <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" style="font-family: Barlow Bold, Helvetica, sans-serif" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermelt de hashtag <strong style="font-family: Barlow Bold, Helvetica, sans-serif">#Legendarymayo</strong>.</p>
+          <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermelt de hashtag <strong>#Legendarymayo</strong>.</p>
         </div>
 
-        <button class="content__toggle" data-toggle-copy style="font-family: Barlow Bold, Helvetica, sans-serif">Lees meer</button>
+        <button class="content__toggle" data-toggle-copy>Lees meer</button>
 
         <div class="carousel" data-carousel="instagram">
           <div class="carousel__button carousel__button--prev" role="button" data-carousel-button="prev">
@@ -48,22 +35,22 @@
           </div>
           <div class="carousel__container" data-carousel-container>
             <div class="carousel__content" data-carousel-content>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-1.jpg' %}" alt="Remia sample 1">
               </a>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-2.jpg' %}" alt="Remia sample 2">
               </a>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-3.jpg' %}" alt="Remia sample 3">
               </a>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-4.jpg' %}" alt="Remia sample 4">
               </a>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-5.jpg' %}" alt="Remia sample 5">
               </a>
-              <a class="carousel__item" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank" data-carousel-item>
+              <a class="carousel__item"  href="/" target="_blank" data-carousel-item>
                 <img src="{% static 'img/sample-6.jpg' %}" alt="Remia sample 6">
               </a>
             </div>
@@ -79,29 +66,29 @@
           <input class="form__field" type="text" name="postal-code" placeholder="Postcode:" required>
           <input class="form__field" type="text" name="city" placeholder="Plaats:" required>
           <div class="tooltip">
-            <span class="tooltip__trigger" style="font-family: Barlow Medium, Helvetica, sans-serif">Algemene Voorwaarden</span>
+            <span class="tooltip__trigger">Algemene Voorwaarden</span>
             <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming.</p>
           </div>
-          <input class="form__submit" style="font-family: Barlow Bold, Helvetica, sans-serif" type="submit" value="Versturen">
+          <input class="form__submit" type="submit" value="Versturen">
         </form>
       </div>
       <footer class="footer">
-        <a class="footer__logo" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank">
+        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">
           <img src="{% static 'svg/remia.svg' %}" alt="Remia">
         </a>
         <ul class="footer__links">
           <li>
-            <a class="footer__link" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank">
+            <a class="footer__link" href="https://www.remia.nl/" target="_blank">
               <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">
             </a>
           </li>
           <li>
-            <a class="footer__link" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank">
+            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">
               <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">
             </a>
           </li>
           <li>
-            <a class="footer__link" style="font-family: Barlow Bold, Helvetica, sans-serif" href="/" target="_blank">
+            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">
               <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">
             </a>
           </li>
