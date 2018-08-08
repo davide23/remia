@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
 </head>
 <body>
-
   <article class="container">
     <div class="container__block">
       <header class="container__header">
@@ -24,7 +23,10 @@
             <li class="content__list-item content__list-item--tertiary">Rosemary-Seasalt</li>
             <li class="content__list-item content__list-item--quaternary">Black Truffle</li>
           </ul>
-          <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermelt de hashtag <strong>#Legendarymayo</strong>.</p>
+          <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" style="text-decoration: none;" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong>#Legendarymayo</strong>. <br><br>
+
+          Wees er snel bij, want op=op!
+          </p>
         </div>
 
         <button class="content__toggle" data-toggle-copy>Lees meer</button>
@@ -35,23 +37,32 @@
           </div>
           <div class="carousel__container" data-carousel-container>
             <div class="carousel__content" data-carousel-content>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-1.jpg' %}" alt="Remia sample 1">
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlS5YkGgovJ/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_6.jpg' %}" alt="Remia Live post 1">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-2.jpg' %}" alt="Remia sample 2">
+              <a class="carousel__item"  href="https://www.instagram.com/p/BldiNB1nZtC/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_5.jpg' %}" alt="Remia Live post 2">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-3.jpg' %}" alt="Remia sample 3">
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlV8lSkn9YX/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_4.jpg' %}" alt="Remia Live post 3">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-4.jpg' %}" alt="Remia sample 4">
+              <a class="carousel__item"  href="https://www.instagram.com/p/Bk0bvP5ncuf/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_3.jpg' %}" alt="Remia Live post 4">
               </a>
-              <a class="carousel__item" href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-5.jpg' %}" alt="Remia sample 5">
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlTPOw1Ax0t/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_22.jpg' %}" alt="Remia Live post 5">
               </a>
-              <a class="carousel__item"  href="/" target="_blank" data-carousel-item>
-                <img src="{% static 'img/sample-6.jpg' %}" alt="Remia sample 6">
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlLUkwUHmVX/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_1.jpg' %}" alt="Remia Live post 6">
+              </a>
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlvB1guHIcE/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_7.jpg' %}" alt="Remia Live post 7">
+              </a>
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlyTJkyH__6/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_8.jpg' %}" alt="Remia Live post 8">
+              </a>
+              <a class="carousel__item"  href="https://www.instagram.com/p/BlnhF8SA-a_/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                <img src="{% static 'img/live_post_9.jpg' %}" alt="Remia Live post 9">
               </a>
             </div>
           </div>
@@ -59,17 +70,19 @@
             <img src="{% static 'svg/arrow.svg' %}" alt="Next">
           </div>
         </div>
-
         <form class="form" method="post" content="t">
           <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
           <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
-          <input class="form__field" type="text" name="postal-code" placeholder="Postcode:" required>
-          <input class="form__field" type="text" name="city" placeholder="Plaats:" required>
+          <div data-form-field="postal-code">
+            <input class="form__field" type="text" name="postal-code" placeholder="Postcode NL:" required data-form-field-input>
+            <div  class="form__error" data-form-field-error>Vul een Nederlandse postcode in.</div>
+          </div>
+          <input class="form__field" type="text" name="city" placeholder="Plaats NL:" required>
           <div class="tooltip">
             <span class="tooltip__trigger">Algemene Voorwaarden</span>
-            <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming.</p>
+            <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming. <br> <br> Samples worden uitsluitend naar Nederlandse adressen verstuurd.</p>
           </div>
-          <input class="form__submit" type="submit" value="Versturen">
+          <input class="form__submit" type="submit" value="Versturen" data-form-submit>
         </form>
       </div>
       <footer class="footer">
@@ -96,7 +109,15 @@
       </footer>
     </div>
   </article>
-
   <script src="{% static 'app.bundle.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123363876-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-123363876-1');
+    </script>
 </body>
 </html>

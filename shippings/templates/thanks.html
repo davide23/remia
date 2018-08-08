@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,18 @@
   <title>Remia</title>
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
 </head>
+
 <body>
   <article class="container">
     <div class="container__block">
       <header class="container__header">
         <h1>#LegendaryMayo</h1>
       </header>
-      <div class="content content--full" style="text-align: center;">
-        <h2 class="content__headline" style="padding-top: 20%;font-size: 29px;padding-bottom: 20%;">
-            Bedankt voor je aanvraag! <br> De sample komt zo spoedig mogelijk jouw kant op.
-        </h2>
+      <div class="content">
+        <div>
+            <h1 class="content__headline">Bedankt voor je aanvraag!</h1>
+            <p class="content__copy">De sample komt zo spoedig mogelijk jouw kant op.</p>
+        </div>
       </div>
       <footer class="footer">
         <a class="footer__logo" href="https://www.remia.nl/" target="_blank">
@@ -41,10 +44,19 @@
           </li>
         </ul>
       </footer>
-
     </div>
   </article>
 
   <script src="{% static 'app.bundle.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123363876-1"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'UA-123363876-1');
+    </script>
 </body>
+
 </html>

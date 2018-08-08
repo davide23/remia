@@ -104,14 +104,14 @@ DATABASES = {
 #     }
 # Local
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'remiaclients',
-#         'USER': 'postgres',
-#         'PASSWORD': 'free_to_enter',
-#     }
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'remiaclients',
+#             'USER': 'postgres',
+#             'PASSWORD': 'free_to_enter',
+#         }
 # }
-# # [END dbconfig]
+# [END dbconfig]
 
 LANGUAGE_CODE = 'en-us'
 

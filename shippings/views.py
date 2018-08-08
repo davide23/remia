@@ -12,7 +12,7 @@ def get_name(request):
             'full_name': request.POST['name'],
             'street_and_number': request.POST['address'],
             'postcode': request.POST['postal-code'],
-            'city': request.POST['name'],
+            'city': request.POST['city'],
         }
 
         form = ClientForm(data=data)
