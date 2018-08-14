@@ -20,7 +20,7 @@ def get_name(request):
 
         if form.is_valid():
             form.save()
-            return redirect('https://www.remia.nl/')
+            return render(request, template_name='thanks.html')
 
     else:
         form = ClientForm()
