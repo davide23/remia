@@ -12,6 +12,7 @@ class ClientForm(ModelForm):
             'street_and_number',
             'postcode',
             'city',
+            'origin',
         ]
         labels = {
             'full_name': 'Volledige naam',

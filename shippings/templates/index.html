@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,82 +11,17 @@
   <link rel="stylesheet" href="{% static 'app.bundle.css' %}">
 </head>
 <body>
-{#<a href="{{ request.META.HTTP_REFERER }}">{{ request.META.HTTP_REFERER }} </a>#}
+{#<a>{{ request.META.HTTP_REFERER }}</a>#}
+{% if not 'instagram' in request.META.HTTP_REFERER %}
   <article class="container">
     <div class="container__block">
       <header class="container__header">
         <h1>#LegendaryMayo</h1>
       </header>
       <div class="content">
-        <h2 class="content__headline">Vraag hier je Legendary sample aan</h2>
-        <div class="content__copy" data-copy>
-          <p>De nieuwe Legendary Mayonaises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise sample nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
-          <ul class="content__list">
-            <li class="content__list-item content__list-item--secondary">Garlic-Sriracha</li>
-            <li class="content__list-item content__list-item--tertiary">Rosemary-Seasalt</li>
-            <li class="content__list-item content__list-item--quaternary">Black Truffle</li>
-          </ul>
-          <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" style="text-decoration: none;" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong>#Legendarymayo</strong>. <br><br>
-
-          Wees er snel bij, want op=op!
-          </p>
+        <div>
+            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>
         </div>
-
-        <button class="content__toggle" data-toggle-copy>Lees meer</button>
-
-        <div class="carousel" data-carousel="instagram">
-          <div class="carousel__button carousel__button--prev" role="button" data-carousel-button="prev">
-            <img src="{% static 'svg/arrow.svg' %}" alt="Next">
-          </div>
-          <div class="carousel__container" data-carousel-container>
-            <div class="carousel__content" data-carousel-content>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlS5YkGgovJ/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_6.jpg' %}" alt="Remia Live post 1">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BldiNB1nZtC/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_5.jpg' %}" alt="Remia Live post 2">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlV8lSkn9YX/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_4.jpg' %}" alt="Remia Live post 3">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/Bk0bvP5ncuf/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_3.jpg' %}" alt="Remia Live post 4">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlTPOw1Ax0t/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_22.jpg' %}" alt="Remia Live post 5">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlLUkwUHmVX/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_1.jpg' %}" alt="Remia Live post 6">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlvB1guHIcE/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_7.jpg' %}" alt="Remia Live post 7">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlyTJkyH__6/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_8.jpg' %}" alt="Remia Live post 8">
-              </a>
-              <a class="carousel__item"  href="https://www.instagram.com/p/BlnhF8SA-a_/?tagged=legendarymayo" target="_blank" data-carousel-item>
-                <img src="{% static 'img/live_post_9.jpg' %}" alt="Remia Live post 9">
-              </a>
-            </div>
-          </div>
-          <div class="carousel__button carousel__button--next" role="button" data-carousel-button="next">
-            <img src="{% static 'svg/arrow.svg' %}" alt="Next">
-          </div>
-        </div>
-        <form class="form" method="post" content="t">
-          <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
-          <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
-          <div data-form-field="postal-code">
-            <input class="form__field" type="text" name="postal-code" placeholder="Postcode NL:" required data-form-field-input>
-            <div  class="form__error" data-form-field-error>Vul een Nederlandse postcode in.</div>
-          </div>
-          <input class="form__field" type="text" name="city" placeholder="Plaats NL:" required>
-          <div class="tooltip">
-            <span class="tooltip__trigger">Algemene Voorwaarden</span>
-            <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming. <br> <br> Samples worden uitsluitend naar Nederlandse adressen verstuurd.</p>
-          </div>
-          <input class="form__submit" type="submit" value="Versturen" data-form-submit>
-        </form>
       </div>
       <footer class="footer">
         <a class="footer__logo" href="https://www.remia.nl/" target="_blank">
@@ -110,15 +47,432 @@
       </footer>
     </div>
   </article>
+{#{% elif 'gratis' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'pepper' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'spydeal' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif '?https://www.realtasty' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'prijsvragen-freaks' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'blankrefer' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'nullrefer' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'allesvoorniks' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{#{% elif 'leukestart' in request.META.HTTP_REFERER %}#}
+{#  <article class="container">#}
+{#    <div class="container__block">#}
+{#      <header class="container__header">#}
+{#        <h1>#LegendaryMayo</h1>#}
+{#      </header>#}
+{#      <div class="content">#}
+{#        <div>#}
+{#            <h1 class="content__headline"> DEZE ACTIE IS VERLOPEN! </h1>#}
+{#        </div>#}
+{#      </div>#}
+{#      <footer class="footer">#}
+{#        <a class="footer__logo" href="https://www.remia.nl/" target="_blank">#}
+{#          <img src="{% static 'svg/remia.svg' %}" alt="Remia">#}
+{#        </a>#}
+{#        <ul class="footer__links">#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.remia.nl/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">#}
+{#              <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">#}
+{#            </a>#}
+{#          </li>#}
+{#        </ul>#}
+{#      </footer>#}
+{#    </div>#}
+{#  </article>#}
+{% else %}
+  <article class="container">
+        <div class="container__block">
+          <header class="container__header">
+            <h1>#LegendaryMayo</h1>
+          </header>
+          <div class="content">
+            <h2 class="content__headline">Vraag hier je Legendary sample aan</h2>
+            <div class="content__copy" data-copy>
+              <p>De nieuwe Legendary Mayonaises zijn verrassend van smaak, erg lekker en kunnen op bijna alles! Vraag Remia's Legendary Real Tasty Mayonaise sample nu aan en ga net als onze ambassadors zelf aan de slag met de drie heerlijke smaken:</p>
+              <ul class="content__list">
+                <li class="content__list-item content__list-item--secondary">Garlic-Sriracha</li>
+                <li class="content__list-item content__list-item--tertiary">Rosemary-Seasalt</li>
+                <li class="content__list-item content__list-item--quaternary">Black Truffle</li>
+              </ul>
+              <p>Vergeet niet jouw Legendary ervaring te delen op Instagram! Tag <a class="copy__link" style="text-decoration: none;" href="https://www.instagram.com/Remiafans/" target="_blank">@Remiafans</a> en vermeld de hashtag <strong>#Legendarymayo</strong>. <br><br>
+
+              Wees er snel bij, want op=op!
+              </p>
+            </div>
+
+            <button class="content__toggle" data-toggle-copy>Lees meer</button>
+
+            <div class="carousel" data-carousel="instagram">
+              <div class="carousel__button carousel__button--prev" role="button" data-carousel-button="prev">
+                <img src="{% static 'svg/arrow.svg' %}" alt="Next">
+              </div>
+              <div class="carousel__container" data-carousel-container>
+                <div class="carousel__content" data-carousel-content>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlS5YkGgovJ/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_6.jpg' %}" alt="Remia Live post 1">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BldiNB1nZtC/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_5.jpg' %}" alt="Remia Live post 2">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlV8lSkn9YX/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_4.jpg' %}" alt="Remia Live post 3">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/Bk0bvP5ncuf/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_3.jpg' %}" alt="Remia Live post 4">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlTPOw1Ax0t/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_22.jpg' %}" alt="Remia Live post 5">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlLUkwUHmVX/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_1.jpg' %}" alt="Remia Live post 6">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlvB1guHIcE/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_7.jpg' %}" alt="Remia Live post 7">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlyTJkyH__6/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_8.jpg' %}" alt="Remia Live post 8">
+                  </a>
+                  <a class="carousel__item"  href="https://www.instagram.com/p/BlnhF8SA-a_/?tagged=legendarymayo" target="_blank" data-carousel-item>
+                    <img src="{% static 'img/live_post_9.jpg' %}" alt="Remia Live post 9">
+                  </a>
+                </div>
+              </div>
+              <div class="carousel__button carousel__button--next" role="button" data-carousel-button="next">
+                <img src="{% static 'svg/arrow.svg' %}" alt="Next">
+              </div>
+            </div>
+            <form class="form" method="post" content="t">
+              <input class="form__field" type="text" name="name" placeholder="Volledige naam:" required>
+              <input class="form__field" type="text" name="address" placeholder="Straat + Huisnummer:" required>
+              <div data-form-field="postal-code">
+                <input class="form__field" type="text" name="postal-code" placeholder="Postcode NL:" required data-form-field-input>
+                <div  class="form__error" data-form-field-error>Vul een Nederlandse postcode in.</div>
+              </div>
+              <input class="form__field" type="text" name="city" placeholder="Plaats NL:" required>
+              <div class="tooltip">
+                <span class="tooltip__trigger">Algemene Voorwaarden</span>
+                <p class="tooltip__container">Door op ‘aanvragen’ te klikken, gaat u ermee akkoord dat Remia CV bovenstaande ingevulde persoonlijke gegevens mag gebruiken om de sample naar u op te sturen. Wij zullen uw persoonsgegevens niet voor andere doeleinden gebruiken dan waar u ze voor hebt afgegeven zonder uw uitdrukkelijke toestemming. <br> <br> Samples worden uitsluitend naar Nederlandse adressen verstuurd. (Max. één sample per adres) </p>
+              </div>
+              <input style="display: none" type="hidden" name="origin" value="{{ request.META.HTTP_REFERER }}">
+              <input class="form__submit" type="submit" value="Versturen" data-form-submit>
+            </form>
+          </div>
+          <footer class="footer">
+            <a class="footer__logo" href="https://www.remia.nl/" target="_blank">
+              <img src="{% static 'svg/remia.svg' %}" alt="Remia">
+            </a>
+            <ul class="footer__links">
+              <li>
+                <a class="footer__link" href="https://www.remia.nl/" target="_blank">
+                  <img class="icon" src="{% static 'svg/website.svg' %}" alt="Website Remia">
+                </a>
+              </li>
+              <li>
+                <a class="footer__link" href="https://www.instagram.com/Remiafans/" target="_blank">
+                  <img class="icon" src="{% static 'svg/instagram.svg' %}" alt="Instagram Remia">
+                </a>
+              </li>
+              <li>
+                <a class="footer__link" href="https://www.facebook.com/remiafans/" target="_blank">
+                  <img class="icon" src="{% static 'svg/facebook.svg' %}" alt="Facebook Remia">
+                </a>
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </article>
+{% endif %}
   <script src="{% static 'app.bundle.js' %}"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123363876-1"></script>
-    <script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123363876-3"></script>
+  <script>
      window.dataLayer = window.dataLayer || [];
      function gtag(){dataLayer.push(arguments);}
      gtag('js', new Date());
-
-     gtag('config', 'UA-123363876-1');
-    </script>
+     gtag('config', 'UA-123363876-3');
+  </script>
 </body>
 </html>
